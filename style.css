@@ -1,0 +1,147 @@
+body{
+    background-color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    text-align: center;
+    height:100vh;
+    display:grid;
+    padding: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.8fr;
+    grid-gap:0.3rem;
+    grid-template-areas: 
+    "header header header header"
+    "profile profile profile profile"
+    "experience experience experience experience "
+    "education education awards awards"
+    "papers papers papers papers "
+    "blogs blogs hobbies hobbies"
+    "images images images images"
+    "footer footer footer footer"
+    ;
+}
+:target {
+    border: 2px solid #D4D4D4;
+    background-color: rgb(117, 169, 221);
+    color:whitesmoke;
+}
+h1{
+    text-align: center;
+}
+ul{
+    text-align: start;
+}
+header a{
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+    padding:10px;
+}
+header{
+    grid-area: header;
+    background-color:aqua;
+    justify-content: space-between;
+    font-size: larger;
+    padding: 10px;
+}
+#profile{
+    grid-area: profile;
+    background-color:lightblue;
+    padding: 10px;
+}
+#experience{
+    grid-area: experience;
+    background-color:lightsteelblue;
+    padding: 10px;
+}
+#education{
+    grid-area : education;
+    background-color:lightskyblue;
+    padding: 10px;
+}
+#awards{
+    grid-area: awards;
+    background-color:lightskyblue;
+    padding: 10px;
+}
+#papers{
+    grid-area : papers;
+    background-color:aliceblue;
+    display: inline-block;
+    padding: 10px;
+}
+#blogs{
+    grid-area : blogs;
+    background-color:lightSKYblue;
+    padding: 10px;
+}
+#hobbies{
+    grid-area: hobbies;
+    background-color:lightskyblue;
+    padding: 10px;
+}
+#images{
+    grid-area: images;
+    background-color:aliceblue;
+    padding: 10px;
+    flex-direction: column;
+}
+footer{
+    grid-area: footer;
+    background-color:aqua;
+    padding: 10px;
+}
+#image img{
+    height: 250px;
+    width: 200px;
+    margin: auto;
+    padding: 10px;
+}
+img{
+    height : 250px;
+    width : 200px;
+    padding: 5px;
+}
+.paperimages{
+    display: inline-block;
+    border : 0.5px solid black;
+    padding : 10px;
+    margin : 3px;
+}
+footer img{
+    height: 50px;
+    width : 50px;
+}
+footer .paperimages ,#images .paperimages {
+    border: none;
+}
+@media screen and (max-width: 950px) {
+    #photos div img{
+      width: 100%;
+    }
+  }
+
+@media only screen and (max-width:500px){
+    .container{
+        font-size: medium;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "header"
+    "profile"
+    "experience"
+    "education"  
+    "awards"
+    "papers"
+    "blogs"
+    "hobbies"
+    "images"
+    "footer";
+   }
+   header{
+    display:none;
+   }
+}
+
+  
+
